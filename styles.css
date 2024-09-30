@@ -1,1 +1,65 @@
 /*  your css code here. If applicable */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.column {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ccc;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.column h2 {
+    margin-bottom: 15px;
+}
+
+.column ul {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.column ul li {
+    margin-bottom: 10px;
+}
+
+.column ul li a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Equal-height columns */
+.container {
+    align-items: stretch; /* Ensure all columns have the same height */
+}
+
+/* Responsive behavior */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+}
